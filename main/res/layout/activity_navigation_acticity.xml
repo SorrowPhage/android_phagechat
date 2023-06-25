@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/navigation"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user_avatar"
+                android:maxHeight="76dp"
+                android:maxWidth="76dp"
+                android:paddingStart="10dp"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/user_username"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:gravity="center|left"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_close"
+            android:maxHeight="40dp"
+            android:maxWidth="40dp"
+            android:paddingStart="10dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:background="#B3ADAD"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:maxHeight="40dp"
+                    android:maxWidth="40dp"
+                    android:paddingStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/depo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/userinfo_depo"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_weight="1"
+                android:maxHeight="30dp"
+                android:maxWidth="30dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:maxHeight="40dp"
+                    android:maxWidth="40dp"
+                    android:paddingStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/userinfo_edit"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_weight="1"
+                android:maxHeight="30dp"
+                android:maxWidth="30dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/navi_exit"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:maxHeight="40dp"
+                    android:maxWidth="40dp"
+                    android:paddingStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/userinfo_exit"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_weight="1"
+                android:maxHeight="30dp"
+                android:maxWidth="30dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

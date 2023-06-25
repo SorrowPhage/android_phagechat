@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ex_sepim</string>
+    <string name="one">消息</string>
+    <string name="two">联系人</string>
+    <string name="thr">动态</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="message_fragement_title">消息</string>
+    <string name="message_fragement_contacts">联系人</string>
+    <string name="message_fragement_trends">动态</string>
+    <string name="userinfo_depo">Depository</string>
+    <string name="userinfo_edit">Edit</string>
+    <string name="userinfo_exit">Exit</string>
+    <string name="chat_send_btn">Send</string>
+    <string name="register_des">注册并绑定手机号</string>
+    <string name="fill_info">请输入信息</string>
+    <string name="result_success">注册成功</string>
+
+</resources>

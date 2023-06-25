@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:windowSoftInputMode="adjustPan"
+    android:background="#F1E8E8"
+    >
+<!--
+    android:windowSoftInputMode="adjustPan"
+    解决输入框将样式顶上去
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00bfff"
+            >
+            <ImageView
+                android:id="@+id/chat_arrow_left"
+                android:maxHeight="55dp"
+                android:maxWidth="55dp"
+                android:paddingStart="10dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/arrow_left_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/chat_username"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eee"
+        android:scrollbars="none"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#f8f8f8"
+        android:layout_gravity="bottom"
+        >
+        <EditText
+            android:id="@+id/chat_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/shape"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/chat_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/send_btn"
+            android:layout_gravity="center"
+            android:text="@string/chat_send_btn" />
+
+    </LinearLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_weight="1"-->
+<!--        >-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:background="#EDEDED"-->
+<!--            >-->
+<!--            <EditText-->
+<!--                android:id="@+id/chat_edit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@drawable/shape"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_gravity="center"-->
+<!--                />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/chat_send_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@drawable/send_btn"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="@string/chat_send_btn" />-->
+<!--        </LinearLayout>-->
+
+<!--    </RelativeLayout>-->
+</LinearLayout>

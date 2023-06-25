@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main"
+    >
+
+    <LinearLayout
+        android:id="@+id/id_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#F1E8E8"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:layout_gravity="center"
+                android:drawableTop="@mipmap/icon_message"
+                android:drawablePadding="10dp"
+                android:text="@string/one"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:gravity="center"
+                />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:button="@null"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_contacts"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:text="@string/two"/>
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="0dp"
+                android:button="@null"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/icon_trends"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:drawablePadding="10dp"
+                android:text="@string/thr"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+</RelativeLayout>
