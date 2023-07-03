@@ -91,6 +91,8 @@ public class MessageFragment extends Fragment {
 
     private String l_account;
 
+//    private ImageView message_logout;
+
 
 
     public MessageFragment() {
@@ -154,6 +156,19 @@ public class MessageFragment extends Fragment {
             }
         });
 
+//        message_logout = view.findViewById(R.id.message_logout);
+//        message_logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getActivity(), LoginActivity.class);
+//
+////                删掉登录数据
+//
+//                startActivity(intent);
+//
+//            }
+//        });
+
         messageAdapter2 = new MessageAdapter(getActivity());
         messageAdapter2.setListener(new OnRecyclerItemClickListener() {
             @Override
@@ -213,10 +228,10 @@ public class MessageFragment extends Fragment {
         }
 
 //        去导航页面
-        avatar.setOnClickListener(view12 -> {
-            Intent intent = new Intent(getActivity(), NavigationActicity.class);
-            startActivity(intent);
-        });
+//        avatar.setOnClickListener(view12 -> {
+//            Intent intent = new Intent(getActivity(), NavigationActicity.class);
+//            startActivity(intent);
+//        });
         view.setOnTouchListener(new View.OnTouchListener() {
             private float mCurPosY;
             private float mCurPosX;

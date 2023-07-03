@@ -1,5 +1,7 @@
 package com.phage.ex_sepim.entity;
 
+import java.sql.Timestamp;
+
 import lombok.Data;
 
 
@@ -15,6 +17,36 @@ public class User {
     private String phone;
 
     private String avatar;
+
+    private String des;
+
+    private Timestamp birthday;
+
+    private Integer sex;
+
+    public Integer getSex() {
+        return sex;
+    }
+
+    public void setSex(Integer sex) {
+        this.sex = sex;
+    }
+
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
+    public Timestamp getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Timestamp birthday) {
+        this.birthday = birthday;
+    }
 
     public Integer getId() {
         return id;

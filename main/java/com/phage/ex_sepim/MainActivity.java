@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.rb3:
                 TrendsFragment trendsFragment = new TrendsFragment();
                 trendsFragment.setArguments(bundle);
-                transaction.replace(R.id.id_content, new TrendsFragment());
+                transaction.replace(R.id.id_content, trendsFragment);
                 break;
         }
         transaction.commit();

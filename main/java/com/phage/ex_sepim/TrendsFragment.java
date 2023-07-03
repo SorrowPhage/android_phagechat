@@ -6,7 +6,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.phage.ex_sepim.utils.GlideCircleTransform;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +30,12 @@ public class TrendsFragment extends Fragment {
     private String mParam2;
 
     private ImageView avatar;
+
+    private TextView trends_username;
+
+//    private ImageView trends_edit_username;
+
+    private Button trends_logout,trends_edit;
 
     public TrendsFragment() {
         // Required empty public constructor
@@ -61,14 +72,37 @@ public class TrendsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_trends, container, false);
-        avatar = view.findViewById(R.id.user_trends_image);
-        avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NavigationActicity.class);
-                startActivity(intent);
-            }
-        });
+        avatar = view.findViewById(R.id.trends_avatar);
+        trends_username = view.findViewById(R.id.trends_username);
+        trends_logout = view.findViewById(R.id.trends_logout);
+        Bundle arguments = getArguments();
+
+        if (arguments != null) {
+            trends_username.setText(arguments.getString("username"));
+            GlideCircleTransform glideCircleTransform = new GlideCircleTransform(getActivity());
+            Glide.with(getActivity()).load(arguments.getString("avatar")).transform(glideCircleTransform).into(avatar);
+
+            trends_edit = view.findViewById(R.id.trends_edit);
+            trends_edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), UserCenterActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("id", arguments.getString("id"));
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+            });
+
+            trends_logout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+        }
 
         return view;
     }

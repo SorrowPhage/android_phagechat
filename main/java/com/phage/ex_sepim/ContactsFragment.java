@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -104,13 +105,13 @@ public class ContactsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contacts, container, false);
         avatar = view.findViewById(R.id.user_contacts_image);
-        avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NavigationActicity.class);
-                startActivity(intent);
-            }
-        });
+//        avatar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getActivity(), NavigationActicity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         Bundle arguments = getArguments();
 
@@ -172,12 +173,13 @@ public class ContactsFragment extends Fragment {
         chat_search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                System.out.println(charSequence);
+
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
+                ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(R.color.teal_200);
+                constactsAdapter.setText(String.valueOf(charSequence), foregroundColorSpan);
             }
 
             @Override
